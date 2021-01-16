@@ -12,7 +12,7 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
-#open-file
+#open-the-file
 
 with open('list.txt') as f:
     lines = [line.rstrip('\n') for line in f]
