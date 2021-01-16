@@ -1,4 +1,3 @@
-from credentials import *
 import tweepy
 import random
 import os
