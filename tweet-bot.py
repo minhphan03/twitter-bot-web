@@ -26,4 +26,4 @@ for line in shuffled_lines:
 
     except tweepy.TweepError as e:
         print(e.reason)
-    sleep(900)
+    sleep(1800)
