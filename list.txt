@@ -1,28 +1,89 @@
 ardor: passion / intense devotion, eagerness / zeal / burning heat
 anguish: excruciating pain/suffering ; to inflict with suffering
+apathetic: emotionless; indifferent / unresponsive
+artifice: gimmick / contrivance ; cleverness ; cunning / deception / con
+abrupt: sudden or unexpected ; curt
+
+backfire: to bring a result opposite to that which was planned or expected
+baneful: destructive; pernicious
+bashful: shy / timid / timorous
+banal: commonplace / bland / hackneyed / trite / insipid
+banish: to exile, to get rid of something
+brusque: abrupt in manner; blunt
+benevolent: kind, good-hearted / benign, caring, compassionate
+beckon: to signal / summon ; to lure
+bequeath: to leave a will
+benign: having a kindly disposition / gracious will -> benignant
+belie: to give a false impression of something
+belligerent: of warlike character; aggressively hostile; bellicose
+bellow: to yell
+berate: to rebuke / reprimand
+beguile: to mislead / delude
+botch (up): to spoil something by doing it badly
+bolster: to support / buttress / reinforce
+bollocks: nonsense
+buttress: to give encouragement or support to someone / plan ; strengthen
+buoyant: cheerful
+
 curfew: a regulation requiring a person to be home at a certain prescribed time, as imposed by a parent on a child.
-calamitous: destructible / dangerous;
+calamitous: destructible / dangerous
+candid: open and honest
+capitulate: to give in / surrender
+catharsis: the purging of the emotions or relieving of emotional tensions, especially through certain kinds of art, as tragedy or music -> cathartic
+cordial: courteous and gracious; friendly; warm / heartfelt
+coalesce: to merge; to unite into one mass / community ; to blend together
 coarse: rough / vulgar / crude
+constrain: to limit / restrict / restrain
 contumacious: naughty, troubling
+contrivance: a plan / scheme ; to bring about / manage to do something 
+confine: to restrict , enclose within bounds ; prevent from leaving a place
+conflate: to amalgamate / converge / consolidate
+conceivable: possible >< inconceivable
+congenial: friendly, affable
+connote: to signify certain meanings in addition to the explicit meaning (connotation)
+commit: to perform / do sth: to express one's feelings ; to devote or engage into something
+complacent: satisfied to the point that no change is needed
+compulsion: the urge / impulse to perform an act ; the act of compelling / coercion
 clamorous: full of the nature of clamor (loud uproars from crowds of pp / vehement expression of desire/dissatisfaction)
+clamp: to hold sth tightly so it will not move
+cramp: to restrict / confine / constrain
+
+daub: to deface / smear / smudge
+delude: to mislead the mind or judgment of / deceive:
+deface: to derogate / efface, obliterate / make invalide
+demur: object / repel
+demure: modest
+demoralize: to deprive (a person or persons) of spirit, courage, discipline, etc. ; destroy the morale of
 dire: terrible / indicating trouble ; urgent / desperate 
+divulge: give away (information) / disclose
+divert: change the direction (of a conversation / route)
+distraught: agitated / anxious
+disconcert: to disturb sb ; to disarrange / throw into confusion 
+dogmatic: arrogant ; assertive / fanantical
+dormant: inactive
+
 encompass: to cover, include
 envisage: to envision
-elicit: to bring out/evoke sth from somebody
-expiate: to make amends by accepting punishment
-ethereal: subline / ghostly / celestial
 engulf: to submerge / plunge in
 entice: to allure
-egregious: extremely bad
-exuberant: abounding in vitality/animated/lively
 entail: to get involved in sth that can't be avoided
 enmity: hatred
+enshroud: cover sth so it can't be seen
+enjoin: to exhort (call upon / persuade sb to do sth / beseech); to inhibit/prohibit
+elicit: to bring out/evoke sth from somebody
+elapse: (of time) to pass by
+expiate: to make amends by accepting punishment
+exhort: to urge, advise, or caution earnestly; admonish urgently.
+expunge: to efface / wipe out / destroy
+exuberant: abounding in vitality/animated/lively
+extempore: (adv) offhand ; without preparation ; without notes ; by improvisation
 elusive: difficult to achieve/find
 embark (on/upon): to start doing sth difficult/painstaking
-enjoin: to exhort (call upon / persuade sb to do sth / beseech); to inhibit/prohibit
-exhort: to urge, advise, or caution earnestly; admonish urgently.
 eminent: conspicuous
-enshroud: cover sth so it can't be seen
+ethereal: subline / ghostly / celestial
+egregious: extremely bad
+efface: to expunge / wipe out / obliterate / withdraw oneself modestly
+
 facious: flippant
 fanatical: dogmatic, bigoted
 felicitous: appropriate, apt
@@ -31,47 +92,145 @@ flippant: cocky, irreverent
 flunk: to fail a test
 forgo: forsake / renounce / abdicate / relinquish
 fortify: reinforce / arm, build up
-frivolous: silly/trivial
 forsake: renounce / abandon
+frivolous: silly/trivial
+frail: weak / fragile; morally weak / easily tempted
 fritter (away): to spend frivolously and unwisely
-instigate: to foment / cause by incitement; urge, provoke to do action
+frolic: to have fun ; engage in merry pranks
+frolicsome: merrily playful; full of fun.
+
+heinous: hateful / odious / abominable / reprehensible:
+hideous: abominable / awful / appalling / disgusting / frightful / nasty / monstrous / horrendous
+
+irrecogible: incurable
+imbue: to infuse sb with opinions / values
+imminent: impending / forthcoming (sth bad)
+improvident: prodigal / extravagant
 implicate: to imply as a necessary circumstance (imply)
+imperious: domineering in a haughty manner ; dictatorial
+impend: to be imminent; be about to happen
 incise: to carve / engrave
 inadvertent: unintentional
 ingratiate: to flatter
 indignant: feeling offended/annoyed
 incongruous: inappropriate
-illusory: deceptive
 infancy: state/period of early babyhood;
 initiative: the ability to follow a plan/task ; determination
 indict: incriminalize
 innocuous: harmless
-imminent: impending / forthcoming (sth bad)
-improvident: prodigal / extravagant
+inclement: stormy (weather); unmerciful (merciless)
+instigate: to foment / cause by incitement; urge, provoke to do action
 inane: silly / lacking sense
-idyllic: charmingly simple or rustic
 insipid: bland / vapid / banal
+insidious: deceitful / intened to entrap or beguile
 incandescent: full of strong emotions
 ineffable: inexpressible / unutterable
 infirmity: illness
 infringe: to violate
+idyllic: charmingly simple or rustic
 illustrious: famous / glorious
+illusory: deceptive
+in the saddle: to be in control; to engage in an activity
+
 listless: languid / spiritless / indifferent
+lethargic: affected with lethargy; drowsy; sluggish; apathetic.
+languid: listless ; lacking in vigor 
+
 mundane: mediocre
 muster: to summon (courage)
+mutable: changeable
+morale: cheerfulness, confidence, zeal, etc., especially in the face of opposition, hardship
+
+overwrought: extremely or excessively excited or agitated ; excessively complex or ornate
+odious: detestable; hateful
+
 per diem: daily allowances - money that an organization gives an employee per day to cover living expenses when travelling on the employer's business.
-pertinacious: resolute / stubborn
+pertinacious: resolute / stubborn / sedulous
 perfunctory: done as duty instead of interest
 promiscuous: taken from a wide variety of sources
-petulant: perverse / fractious / impatient / irritable
 proclivity: natural or habitual inclination or tendency; propensity; predisposition
+prurient: having, inclined to have, or characterized by lascivious or lustful thoughts, desires, etc
 perilous: dangeorus -> peril: danger
+pervade: to become spread throughout all parts of
+perpetrate: to commit (a crime)
+perennial: perpetial; everlasting; recurrent
+peculiar: strange / eerie / uncommon
+petulant: perverse / fractious / impatient / irritable
+pliable: flexible
+plight: trouble; predicament
+predicament: an unpleasantly difficult, perplexing, or dangerous situation
+precipitate: to hasten the occurence ; accelerate
+preposterous: ridiculous
+prevalent: widespread of wide extent or occurrence / having mainstream acceptance ; having the superiority or ascendancy.
+presume: to take for granted, assume, or suppose ; to undertake without permission
+predispose (sth): to give an inclination or tendency to beforehand; make susceptible:
+prodigious: colossal; immense; mammoth
+propriety: moral standards
+proliferate: to increase rapidly in numbers / multiply
+profligate: recklessly prodigal or extravagant ; utterly immoral / dissipated / dissolute
+promulgate: to set forth, promote, publish ; to declare, proclaim formally
+protrude: to project; to emerge with conspicuousness
+protract: to prolong the time / procrastinate / postpone
+protuberant: bulging out beyond the surrounding surface; protruding / projecting
+pestilent: poisonous ; deadly
+pejorative: depreciatory; having a disparaging, derogatory, or belittling effect or force
+pernicious: causing insidious harm or ruin; ruinous; injurious; hurtful:
 perverse: willfully determined or disposed to go counter to what is expected or desired; contrary
+placate: to appease ; pacify
+palpable: evident; tangible
+postulate: to assume without proof, or as self-evident; take for granted
+plead: to beseech; to beg / ask / request
+
+raucous: harsh ; strident ; disorderly
+raze: to bulldoze / knock down / completely destroy sth
 repugnant: distasteful, objectionable, or offensive
+renege: to break a promise
+reprehend: to reprove ; rebuke ; blame on
+reprove: to disapprove of strongly / censure ; criticize gently (to a child)
+rebuke: to express sharp, stern disapproval of; reprove; reprimand
+reprimand: to rebuke, reprehend
+reciprocate: to respond to a favor; repay / retaliate ; correspond
+reciprocal: 
+remonstrate: to present reasons in complaint; plead in protest
+renounce: to repudiate / disown ; to give up or put aside voluntarily
+repudiate: to reject as having no authority or binding force / to cast off ; reject with condemnation
+rigid: inflexible ; strict
+rollick: to move or act in a carefree, frolicsome manner; behave in a free, hearty, lively, or jovial way.
+
+savvy: experienced, knowledgable, and well-informed
+sacrilege: the violation or profanation of anything sacred or held sacred
+salutary: favorable to or promoting health; healthful ; wholesome
+squander: to lavish/misuse; to use and spend extravagantly
+surreptitious: acting in a stealthy way; clandestine
+surmise: to think or infer without certain or strong evidence; conjecture; guess
 subvert: to rebel
 subversive: rebellious = subjugative
+subsist: to manage to stay alive
+susceptible: impressionable; easily to be affected; vulnerable; responsive / sensitive; inclined
+supersede: to replace
+summit: the highest point of attainment or aspiration / the highest state or degree
 stealthy: surreptitious, clandestine
-surreptitious: acting in a stealthy way ; subreptitious
+stalwart: sturdy, robust; strong & brave; uncompromising
+stratify: to form or place in layers
+strife: vigorous or bitter conflict, discord, or antagonism
+satiate: to fulfill; to satisfy
+stagger: to falter or begin to give way, as in an argument or fight ; to walk unsteadily
+simpleton: a fool
+sedate: composed in character
+sedative: soothing; invigorating
+sententious: self-righteous
+self-righteous: confident of one's own righteousness, especially when smugly moralistic and intolerant of the opinions and behavior of others.
+sedulous: persistent; diligent
+solicit: to seek for (something) by entreaty, earnest or respectful request
+somber: gloomily dark; shadowy; dimly lighted
+shabby: worned-out; deteriorated
+scrutinize: to investigate
+scurrilous: grossly or obscenely abusive ; coarsely jocular or derisive
+scant: limited / meager ; almost inadequate
+scrupulous: having moral / ethical standards
+swindler: to obtain by fraud
+swell: to grow in bulk by absorbing
+
 tackle: deal with sth
 tactical: strategic
 tantamount: equivalent, as in value, force, effect, or signification
@@ -91,10 +250,17 @@ temporize: delay
 trance: a half-conscious state, seemingly between sleeping and waking / a state of complete mental absorption or deep musing.
 tractable: manageable
 thereafter: afterward
+
 upstage: to make people notice you more than sb else
 underscore: emphasize
 unwind: disentangle
 upscale/upmarket: appealing to catering to high-income consumers; of high quality ; not easy to access / afford
+ubiquitous: omnipresent ; commonplace ; pervasive
+
 vertigo: a dizzying sensation of tilting within stable surroundings
 vociferous: crying out noisily / clamorous
+vow: to make a serious promise to do something
+vicinity: tthe area or region near or about a place ; neighborhood
+
 wheedle: to use beguiling or artful persuasions
+woe: grievous distress, affliction, or trouble

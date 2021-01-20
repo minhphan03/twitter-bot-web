@@ -15,7 +15,7 @@ api = tweepy.API(auth)
 #open the list of the words
 
 with open('list.txt') as f:
-    lines = [line.rstrip('\n') for line in f]
+    lines = [line.rstrip('\n') for line in f if line != '\n']
 
 shuffled_lines = random.sample(lines, len(lines))
 
@@ -26,4 +26,4 @@ for line in shuffled_lines:
 
     except tweepy.TweepError as e:
         print(e.reason)
-    sleep(1800)
+    sleep(10800)
