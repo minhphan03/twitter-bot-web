@@ -1,3 +1,4 @@
+from threading import Thread
 import tweepy
 import random
 import os
@@ -10,20 +11,56 @@ ACCESS_TOKEN = environ['ACCESS_TOKEN']
 ACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-api = tweepy.API(auth)
+
+api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 #open the list of the words
 
-with open('list.txt') as f:
-    lines = [line.rstrip('\n') for line in f if line != '\n']
+def tweeter():
+    while True:
+        with open('list.txt') as f:
+            lines = [line.rstrip('\n') for line in f if line != '\n']
 
-shuffled_lines = random.sample(lines, len(lines))
+        shuffled_lines = random.sample(lines, len(lines))
 
-for line in shuffled_lines:
-    try:
-        print(line)
-        api.update_status(line)
+        for line in shuffled_lines:
+            try:
+                print(line)
+                api.update_status(line)
 
-    except tweepy.TweepError as e:
-        print(e.reason)
-    sleep(21600)
+            except tweepy.TweepError as e:
+                print(e.reason)
+            sleep(21600)
+
+
+def retweeter():
+    while True:
+        data = api.user_timeline(screen_name='MerriamWebster', count=3)
+        for tweet in data:
+            try:
+                if "#WordOfTheDay" in tweet.text:
+                    print(tweet.text)
+                    tweet.retweet()
+                    break
+            except tweepy.TweepError as e:
+                print(e)
+        sleep(43200)
+
+        data2 = api.user_timeline(screen_name='Dictionarycom', count=5)
+
+        for tweet in data2:
+            try:
+                if "#WordOfTheDay" in tweet.text:
+                    print(tweet.text)
+                    tweet.retweet()
+                    break
+            except tweepy.TweepError as e:
+                print(e)
+
+        sleep(43200)
+
+
+if __name__ == "__main__":
+    Thread(target=tweeter()).start()
+    Thread(target=retweeter()).start()
+
