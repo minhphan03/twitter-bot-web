@@ -35,7 +35,7 @@ def tweeter():
 
 def retweeter():
     while True:
-        data = api.user_timeline(screen_name='MerriamWebster', count=3)
+        data = api.user_timeline(screen_name='MerriamWebster', count=7)
         for tweet in data:
             try:
                 if "#WordOfTheDay" in tweet.text:
@@ -46,7 +46,7 @@ def retweeter():
                 print(e)
         sleep(28800)
 
-        data2 = api.user_timeline(screen_name='Dictionarycom', count=5)
+        data2 = api.user_timeline(screen_name='Dictionarycom', count=7)
 
         for tweet in data2:
             try:
@@ -59,7 +59,7 @@ def retweeter():
 
         sleep(28800)
 
-        data3 = api.user_timeline(screen_name='Thesauruscom', count=5)
+        data3 = api.user_timeline(screen_name='Thesauruscom', count=7)
 
         for tweet in data3:
             try:
