@@ -1,4 +1,4 @@
-from threading import Thread
+from multiprocessing import Process
 import tweepy
 import random
 from os import environ
@@ -72,6 +72,6 @@ def retweeter():
         sleep(28800)
 
 if __name__ == "__main__":
-    Thread(target=retweeter()).start()
-    Thread(target=tweeter()).start()
+    Process(target=retweeter()).start()
+    Process(target=tweeter()).start()
 
