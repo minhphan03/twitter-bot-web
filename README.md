@@ -1,6 +1,8 @@
 ### Python Tweet Bot for Twitter
 
-This tweet bot utilizes multiple libraries like environ, tweepy and time to create a simple tweet bot that tweet vocabularies from a list of text. It is not used for anything else besides tweeting. This bot was then deployed through Heroku (an online cloud platform). 
+This tweet bot utilizes multiple packages like environ, tweepy and time to create a simple tweet bot that tweet vocabularies from a list of text. It is not used for anything else besides tweeting. This bot was then deployed through Heroku (an online cloud platform). 
+
+Updated: Because of the lack of resources on Heroku, the retweet bot will also be integrated into this bot as well.
 
 #### Many thanks to:
 - [Adriaan Van Niekerk with "Python Tutorial | How to deploy your Python Twitter bot to Heroku so that it runs in the cloud"](https://www.youtube.com/watch?v=iLvMYXKIcPo)
