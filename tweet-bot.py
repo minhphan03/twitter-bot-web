@@ -44,7 +44,7 @@ def retweeter():
                     break
             except tweepy.TweepError as e:
                 print(e)
-        sleep(43200)
+        sleep(28800)
 
         data2 = api.user_timeline(screen_name='Dictionarycom', count=5)
 
@@ -57,8 +57,20 @@ def retweeter():
             except tweepy.TweepError as e:
                 print(e)
 
-        sleep(43200)
+        sleep(28800)
 
+        data3 = api.user_timeline(screen_name='Thesauruscom', count=5)
+
+        for tweet in data3:
+            try:
+                if "#SynonymOfTheDay" in tweet.text:
+                    print(tweet.text)
+                    tweet.retweet()
+                    break
+
+            except tweepy.TweepError as e:
+                print(e)
+        sleep(28800)
 
 if __name__ == "__main__":
     Thread(target=tweeter()).start()
