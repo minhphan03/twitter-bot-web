@@ -1,7 +1,6 @@
 from threading import Thread
 import tweepy
 import random
-import os
 from os import environ
 from time import sleep
 
@@ -73,6 +72,6 @@ def retweeter():
         sleep(28800)
 
 if __name__ == "__main__":
-    Thread(target=tweeter()).start()
     Thread(target=retweeter()).start()
+    Thread(target=tweeter()).start()
 
