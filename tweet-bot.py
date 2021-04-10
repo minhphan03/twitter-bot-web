@@ -1,4 +1,4 @@
-from concurrent.futures import ThreadPoolExecutor
+from threading import Thread
 import tweepy
 import random
 from os import environ
@@ -10,7 +10,10 @@ ACCESS_TOKEN = environ['ACCESS_TOKEN']
 ACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+
+#open the list of the words
 
 def tweeter():
     while True:
@@ -28,10 +31,10 @@ def tweeter():
                 print(e.reason)
             sleep(21600)
 
+
 def retweeter():
     while True:
-        sleep(5)
-        data = api.user_timeline(screen_name='MerriamWebster', count=7)
+        data = api.user_timeline(screen_name='MerriamWebster', count=3)
         for tweet in data:
             try:
                 if "#WordOfTheDay" in tweet.text:
@@ -40,10 +43,9 @@ def retweeter():
                     break
             except tweepy.TweepError as e:
                 print(e)
+        sleep(43200)
 
-        sleep(28800)
-
-        data2 = api.user_timeline(screen_name='Dictionarycom', count=7)
+        data2 = api.user_timeline(screen_name='Dictionarycom', count=5)
 
         for tweet in data2:
             try:
@@ -54,25 +56,9 @@ def retweeter():
             except tweepy.TweepError as e:
                 print(e)
 
-        sleep(28800)
-
-        data3 = api.user_timeline(screen_name='Thesauruscom', count=7)
-
-        for tweet in data3:
-            try:
-                if "#SynonymOfTheDay" in tweet.text:
-                    print(tweet.text)
-                    tweet.retweet()
-                    break
-
-            except tweepy.TweepError as e:
-                print(e)
-
-        sleep(28800)
+        sleep(43200)
 
 
 if __name__ == "__main__":
-    pool = ThreadPoolExecutor(max_workers=2)
-
-    pool.submit(retweeter())
-    pool.submit(tweeter())
+    Thread(target=tweeter()).start()
+    Thread(target=retweeter()).start()
