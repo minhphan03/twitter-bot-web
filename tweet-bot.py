@@ -69,14 +69,9 @@ def retweeter():
 
         sleep(28800)
 
-def run_io_tasks_in_parallel(tasks):
-    with ThreadPoolExecutor() as executor:
-        running_tasks = [executor.submit(task) for task in tasks]
-        for running_task in running_tasks:
-            running_task.result()
-
 
 if __name__ == "__main__":
-    run_io_tasks_in_parallel([
-        retweeter(), tweeter(),
-    ])
+    pool = ThreadPoolExecutor(max_workers=2)
+
+    pool.submit(retweeter())
+    pool.submit(tweeter())
