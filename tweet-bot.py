@@ -1,4 +1,4 @@
-from multiprocessing import Process
+from concurrent.futures import ThreadPoolExecutor
 import tweepy
 import random
 from os import environ
@@ -39,6 +39,7 @@ def retweeter():
                     break
             except tweepy.TweepError as e:
                 print(e)
+
         sleep(28800)
 
         data2 = api.user_timeline(screen_name='Dictionarycom', count=7)
@@ -65,13 +66,17 @@ def retweeter():
 
             except tweepy.TweepError as e:
                 print(e)
+
         sleep(28800)
 
-if __name__ == "__main__":
-    p1 = Process(target=tweeter())
-    p2 = Process(target=retweeter())
+def run_io_tasks_in_parallel(tasks):
+    with ThreadPoolExecutor() as executor:
+        running_tasks = [executor.submit(task) for task in tasks]
+        for running_task in running_tasks:
+            running_task.result()
 
-    p1.start()
-    p2.start()
-    p1.join()
-    p2.join()
+
+if __name__ == "__main__":
+    run_io_tasks_in_parallel([
+        retweeter(), tweeter(),
+    ])
