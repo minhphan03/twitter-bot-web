@@ -30,6 +30,7 @@ def tweeter():
 
 def retweeter():
     while True:
+        sleep(5)
         data = api.user_timeline(screen_name='MerriamWebster', count=7)
         for tweet in data:
             try:
