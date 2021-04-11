@@ -43,7 +43,7 @@ async def retweeter():
                     break
             except tweepy.TweepError as e:
                 print(e)
-        await asyncio(28800)
+        await asyncio.sleep(28800)
 
         data2 = api.user_timeline(screen_name='Dictionarycom', count=5)
 
