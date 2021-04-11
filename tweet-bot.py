@@ -1,8 +1,7 @@
-from threading import Thread
+import asyncio
 import tweepy
 import random
 from os import environ
-from time import sleep
 
 CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
@@ -15,7 +14,8 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 #open the list of the words
 
-def tweeter():
+
+async def tweeter():
     while True:
         with open('list.txt') as f:
             lines = [line.rstrip('\n') for line in f if line != '\n']
@@ -25,25 +25,25 @@ def tweeter():
         for line in shuffled_lines:
             try:
                 print(line)
-                api.update_status(line)
+                #api.update_status(line)
 
             except tweepy.TweepError as e:
                 print(e.reason)
-            sleep(21600)
+            await asyncio.sleep(21600)
 
 
-def retweeter():
+async def retweeter():
     while True:
         data = api.user_timeline(screen_name='MerriamWebster', count=3)
         for tweet in data:
             try:
                 if "#WordOfTheDay" in tweet.text:
                     print(tweet.text)
-                    tweet.retweet()
+                    #tweet.retweet()
                     break
             except tweepy.TweepError as e:
                 print(e)
-        sleep(43200)
+        await asyncio(28800)
 
         data2 = api.user_timeline(screen_name='Dictionarycom', count=5)
 
@@ -51,14 +51,38 @@ def retweeter():
             try:
                 if "#WordOfTheDay" in tweet.text:
                     print(tweet.text)
-                    tweet.retweet()
+                    #tweet.retweet()
                     break
             except tweepy.TweepError as e:
                 print(e)
 
-        sleep(43200)
+        await asyncio.sleep(28800)
 
+        data3 = api.user_timeline(screen_name='Thesauruscom', count=5)
 
+        for tweet in data3:
+            try:
+                if "#SynonymOfTheDay" in tweet.text:
+                    print(tweet.text)
+                    #tweet.retweet()
+                    break
+
+            except tweepy.TweepError as e:
+                print(e)
+        await asyncio.sleep(28800)
+
+async def main():
+    task1 = asyncio.create_task(tweeter())
+    task2 = asyncio.create_task(retweeter())
+    await task1
+    await task2
 if __name__ == "__main__":
-    Thread(target=tweeter()).start()
-    Thread(target=retweeter()).start()
+    # event = threading.Event()
+    # t2 = threading.Thread(target=retweeter())
+    # t1 = threading.Thread(target=tweeter())
+    # t1.start()
+    # t2.start()
+    # t1.join()
+    # t2.join()
+
+    asyncio.run(main())
