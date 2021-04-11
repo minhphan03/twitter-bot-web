@@ -25,7 +25,7 @@ async def tweeter():
         for line in shuffled_lines:
             try:
                 print(line)
-                #api.update_status(line)
+                api.update_status(line)
 
             except tweepy.TweepError as e:
                 print(e.reason)
@@ -39,7 +39,7 @@ async def retweeter():
             try:
                 if "#WordOfTheDay" in tweet.text:
                     print(tweet.text)
-                    #tweet.retweet()
+                    tweet.retweet()
                     break
             except tweepy.TweepError as e:
                 print(e)
@@ -51,7 +51,7 @@ async def retweeter():
             try:
                 if "#WordOfTheDay" in tweet.text:
                     print(tweet.text)
-                    #tweet.retweet()
+                    tweet.retweet()
                     break
             except tweepy.TweepError as e:
                 print(e)
@@ -64,7 +64,7 @@ async def retweeter():
             try:
                 if "#SynonymOfTheDay" in tweet.text:
                     print(tweet.text)
-                    #tweet.retweet()
+                    tweet.retweet()
                     break
 
             except tweepy.TweepError as e:
