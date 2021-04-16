@@ -176,6 +176,7 @@ morale: cheerfulness, confidence, zeal, etc., especially in the face of oppositi
 
 overwrought: extremely or excessively excited or agitated ; excessively complex or ornate
 odious: detestable; hateful
+obstinate: stubborn
 
 potent: powerful, mighty
 per diem: daily allowances - money that an organization gives an employee per day to cover living expenses when travelling on the employer's business.
@@ -230,12 +231,15 @@ renege: to break a promise
 reprehend: to reprove ; rebuke ; blame on
 reprove: to disapprove of strongly / censure ; criticize gently (to a child)
 rebuke: to express sharp, stern disapproval of; reprove; reprimand
+redeem: to compensate for the faults or bad aspects of sth ; to atone / make amends
 reprimand: to rebuke, reprehend
 repent: to feel remorse, contrition for what has done or failed to do
 reciprocate: to respond to a favor; repay / retaliate ; correspond
 reciprocal: involve two sides helping each other or behaving the same way to each other
 recuperate: to recover; to recoup
 recompense: to award compensation to sb
+reconcile: to restore peace between two sides
+recalcitrant: having an obstinately uncooperative attitude toward authority or discipline
 remonstrate: to present reasons in complaint; plead in protest, objection
 renounce: to repudiate / disown ; to give up or put aside voluntarily
 repudiate: to reject as having no authority or binding force / to cast off ; reject with condemnation
