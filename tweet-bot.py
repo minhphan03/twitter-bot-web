@@ -40,11 +40,13 @@ async def retweeter():
                 if "#WordOfTheDay" in tweet.text:
                     print(tweet.text)
                     tweet.retweet()
+                    print("time until next retweet session ", getTime()-28800)
                     await asyncio.sleep(28800)
                     break
             except tweepy.TweepError as e:
                 print(e)
-                await asyncio.sleep(5)
+
+
 
         data2 = api.user_timeline(screen_name='Dictionarycom', count=5)
 
@@ -53,11 +55,11 @@ async def retweeter():
                 if "#WordOfTheDay" in tweet.text:
                     print(tweet.text)
                     tweet.retweet()
+                    print("time until next retweet session ", getTime() - 28800)
                     await asyncio.sleep(28800)
                     break
             except tweepy.TweepError as e:
                 print(e)
-                await asyncio.sleep(5)
 
         data3 = api.user_timeline(screen_name='Thesauruscom', count=5)
 
@@ -70,6 +72,7 @@ async def retweeter():
 
             except tweepy.TweepError as e:
                 print(e)
+        print("time until next retweet session ",getTime())
         await asyncio.sleep(getTime())
 
 def getTime():
