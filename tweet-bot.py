@@ -72,8 +72,13 @@ async def retweeter():
 
             except tweepy.TweepError as e:
                 print(e)
+        del data
+        del data2
+        del data3
         print("time until next retweet session ", getTime())
         await asyncio.sleep(getTime())
+
+
 
 def getTime():
     t1 = datetime.datetime.today()
