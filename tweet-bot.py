@@ -97,25 +97,24 @@ async def reply_bot():
             tweet_id = f.read()
             print("the id is '" + tweet_id + "'")
 
-        if str(id) == str(tweet.id):
-            print("already answer this reply")
+        if str(tweet_id) == str(tweet.id):
+            print("break.......")
             break
         else:
-            print(tweet.id)
+            print("enter else statement")
             with open("tweet_id.txt", "w") as f:
                 f.write(str(tweet.id))
-                print("the id is '" + id + "'")
-            print("start processing this request")
-
+                print("the id is '" + tweet.id + "'")
+            print("hey")
         if tweet.in_reply_to_status_id is not None:
             continue
 
         text = re.search(r'\s*(?<=(@thevocabbot)).*', tweet.text)
-        print(webscraping(text.group().strip().split()))
-        api.update_status(status=f"@{tweet.user.screen_name}", in_reply_to_status_id = tweet.id)
+        result = webscraping(text.group().strip().split())
+        api.update_status(status=f"@{tweet.user.screen_name} {result}", in_reply_to_status_id = tweet.id)
         print("sleep")
+        await asyncio.sleep(200)
 
-    await asyncio.sleep(86400)
 
 def webscraping(word):
     try:
