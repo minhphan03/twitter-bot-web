@@ -1,4 +1,5 @@
 ardor: passion / intense devotion, eagerness / zeal / burning heat
+ardent: passionate ; displaying or characterized by strong enthusiasm or devotion
 amiable: friendly and pleasant in temperament
 amicable: peaceable, characterized in goodwill
 amenable: ready to consent / agreeable ; willing to accept suggestions or submit to authority
@@ -10,6 +11,7 @@ acolyte: a follower / helper of a leader
 admissible: acceptable
 atrocious: brutal ; monstrous / evil / abominable
 anticlimactic: dull, boring >< climactic
+allude: to make a subtle reference to ; to suggest
 
 backfire: to bring a result opposite to that which was planned or expected
 baneful: destructive; pernicious
@@ -85,6 +87,8 @@ disconcert: to disturb sb ; to disarrange / throw into confusion
 didactic: designed to teach people something, especially a moral lesson
 dogmatic: arrogant ; assertive / fanantical
 dormant: inactive
+dwell on: to ponder / talk a lot about sth that should be better to forget
+dwell: to live somewhere
 
 encompass: to cover, include
 envisage: to envision
@@ -109,6 +113,7 @@ egregious: extremely bad
 efface: to expunge / wipe out / obliterate / withdraw oneself modestly
 esteem: to regard with respect / to appreciate;
 esteem: respect / favorable respect;
+euphemism: mild statement to replace a harsher one
 
 facious: flippant
 fanatical: dogmatic, bigoted
@@ -125,6 +130,14 @@ frail: weak / fragile; morally weak / easily tempted
 fritter (away): to spend frivolously and unwisely
 frolic: to have fun ; engage in merry pranks
 frolicsome: merrily playful; full of fun.
+
+gregarious: sociable
+gratuitous: unnecessary
+grandiose: seeming very impressive but too large, complicated, expensive, etc. to be practical or possible
+grimy: covered with dirt
+grisly: extrememly unpleasant and frightening
+grudge: a feeling of anger or dislike towards sb because of sth bad they have done to you in the past
+grudging: unwilling / reluctant
 
 heinous: hateful / odious / abominable / reprehensible:
 hideous: abominable / awful / appalling / disgusting / frightful / nasty / monstrous / horrendous
@@ -157,15 +170,19 @@ inebriate: to intoxicate / make drunk ; to stupefy
 infirmity: illness
 infringe: to violate
 invincible: unconquerable
+intone: to say something in a slow and serious voice without much expression
 idyllic: charmingly simple or rustic
 illustrious: famous / glorious
 illusory: deceptive
 in the saddle: to be in control; to engage in an activity
 
+juxtapose: to bring two things together to contrast
 listless: languid / spiritless / indifferent
 lethargic: affected with lethargy; drowsy; sluggish; apathetic.
 languid: listless ; lacking in vigor 
+luminary: an expert or great influence in a special area / activity
 
+mettle: the ability and determination to do sth successfully despite difficult conditions
 mercenary: motivated solely by money / material gain
 miscellaneous: varied / having a variety of characteristics or aspects
 matriculate: to admit or be admitted to a college/university
@@ -202,6 +219,7 @@ precipitate: to hasten the occurence ; accelerate
 preposterous: ridiculous
 premeditation: the act of considering and planning a crime or bad action in advance
 prevalent: widespread of wide extent or occurrence / having mainstream acceptance ; having the superiority or ascendancy.
+prescience: the quality of knowing or appearing to know about things before they happen
 presume: to take for granted, assume, or suppose ; to undertake without permission
 predispose (sth): to give an inclination or tendency to beforehand; make susceptible:
 prodigious: colossal; immense; mammoth
@@ -216,6 +234,8 @@ protract: to prolong the time / procrastinate / postpone
 protuberant: bulging out beyond the surrounding surface; protruding / projecting
 placate: to appease ; pacify
 plead: to beseech; to beg / ask / request
+plea: an urgent emotional request ; a statement made by / for sb who is accused of a crime
+pledge: a serious promise / commitment 
 palpable: evident; tangible
 panacea: something that will solve all of the problems of a situation
 pamper: to take care of sb very well
@@ -243,6 +263,7 @@ recalcitrant: having an obstinately uncooperative attitude toward authority or d
 remonstrate: to present reasons in complaint; plead in protest, objection
 renounce: to repudiate / disown ; to give up or put aside voluntarily
 repudiate: to reject as having no authority or binding force / to cast off ; reject with condemnation
+reverie: a daydream
 rigid: inflexible ; strict
 rollick: to move or act in a carefree, frolicsome manner; behave in a free, hearty, lively, or jovial way.
 
@@ -266,13 +287,15 @@ stupefy: to cause sb to be unable to think clearly / to daze; to amaze / astonis
 stipend: a fixed and regular payment, such as a salary for services rendered or an allowance
 stalwart: sturdy, robust; strong & brave; uncompromising
 stratify: to form or place in layers
+straight-laced: having strict ideas about moral behaviors
 strife: vigorous or bitter conflict, discord, or antagonism
 strenuous: vigorously active ; require great effort, energy
 stagger: to falter or begin to give way, as in an argument or fight ; to walk unsteadily
 simpleton: a fool
+serendipity: favorable occurrence of events in a lucky way
 sedate: composed in character
 sedative: soothing; invigorating
-sententious: self-righteous
+sententious: self-righteous; Full of or given to using aphorisms, especially in a pompously moralizing manner.
 self-righteous: confident of one's own righteousness, especially when smugly moralistic and intolerant of the opinions and behavior of others.
 sedulous: persistent; diligent
 seismic: having a very great effect ; very great size
@@ -290,6 +313,7 @@ tackle: deal with sth
 tactical: strategic
 tantamount: equivalent, as in value, force, effect, or signification
 tempestuous: stormy, full of emotions
+temporize: delay
 tentative: irresolute, hesitant
 tenacious: pertinacious = persistent / stubborn = obstinate / sticky
 timid: timorous, shy / intimidated
@@ -300,9 +324,9 @@ transcend: to rise above or go beyond / overpass / exceed (in excellence, extent
 transverse: diagonal
 transgress: to violate / offend / sin / infringe ; to pass or go beyond (an object -- limit, boundary, law)
 trite: unimportant
+trepid: timid / timorous / fearful
 tryst: a rendezvous between two lovers
 trample: ignore sb's feelings / step & crush sth with the feet
-temporize: delay
 trance: a half-conscious state, seemingly between sleeping and waking / a state of complete mental absorption or deep musing.
 tractable: manageable
 thereafter: afterward
