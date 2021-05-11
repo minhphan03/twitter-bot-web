@@ -104,17 +104,17 @@ async def reply_bot():
             print("enter else statement")
             with open("tweet_id.txt", "w") as f:
                 f.write(str(tweet.id))
-                print("the id is '" + tweet.id + "'")
-            print("hey")
+            print("the tweet id is" + str(tweet.id))
         if tweet.in_reply_to_status_id is not None:
             continue
-
-        text = re.search(r'\s*(?<=(@thevocabbot)).*', tweet.text)
-        result = webscraping(text.group().strip().split())
-        api.update_status(status=f"@{tweet.user.screen_name} {result}", in_reply_to_status_id = tweet.id)
-        print("sleep")
-        await asyncio.sleep(200)
-
+        try:
+            text = re.search(r'\s*(?<=(@thevocabbot)).*', tweet.text)
+            result = webscraping(text.group().strip().split())
+            api.update_status(status=f"@{tweet.user.screen_name} {result}", in_reply_to_status_id = tweet.id)
+            print("sleep")
+            await asyncio.sleep(200)
+        except tweepy.TweepError as e:
+            print(e)
 
 def webscraping(word):
     try:
@@ -128,7 +128,7 @@ def webscraping(word):
 
         content = allcontent.findAll('span', attrs={'class': 'dtText'})
         if len(content) > 3:
-            content = content[:4]
+            content = content[:3]
         strings = []
 
         for i in content:
@@ -141,7 +141,7 @@ def webscraping(word):
         return " ".join(word) + ": " + "; ".join(strings) + ". See more at " + link
 
     except requests.exceptions:
-        return "This word does not exist in Merriam Webster. Please look up manually or check your grammar."
+        return "This word does not exist in Merriam Webster. Please look up manually or check your grammar. DM us if you have any request."
 
 
 async def main():
