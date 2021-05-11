@@ -26,7 +26,7 @@ async def tweeter():
 
         for shuffledline in shuffled_lines:
             try:
-                print(shuffledline)
+                api.update_status(shuffledline)
                 lines.remove(shuffledline)
                 with open('list.txt', "w") as f:
                     for line in lines:
@@ -123,7 +123,6 @@ def webscraping(word):
         c = r.content
 
         soup = BeautifulSoup(c, 'html.parser')
-        print("help")
         allcontent = soup.find('div', attrs={'class': 'vg'})
 
         content = allcontent.findAll('span', attrs={'class': 'dtText'})
