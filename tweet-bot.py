@@ -92,27 +92,19 @@ async def retweeter():
 async def reply_bot():
     print("retrieving mentions")
     for tweet in tweepy.Cursor(api.mentions_timeline).items(limit=1):
-
-        with open("tweet_id.txt", "r") as f:
-            tweet_id = f.read()
-            print("the id is '" + tweet_id + "'")
-
-        if str(tweet_id) == str(tweet.id):
-            print("break.......")
-            break
-        else:
-            print("enter else statement")
-            with open("tweet_id.txt", "w") as f:
-                f.write(str(tweet.id))
-            print("the tweet id is" + str(tweet.id))
-        if tweet.in_reply_to_status_id is not None:
-            continue
         try:
+            isAnswered = False
             text = re.search(r'\s*(?<=(@thevocabbot)).*', tweet.text)
-            result = webscraping(text.group().strip().split())
-            api.update_status(status=f"@{tweet.user.screen_name} {result}", in_reply_to_status_id = tweet.id)
+            result = "@" + tweet.user.screen_name + " " + webscraping(text.group().strip().split())
+            for tweet in api.user_timeline(screen_name='thevocabbot', count=10):
+                if str(tweet.text)[:50] == result[:50]:
+                    print("break")
+                    isAnswered = True
+
+            if (isAnswered == False):
+                api.update_status(status=f"@{tweet.user.screen_name} {result}", in_reply_to_status_id = tweet.id)
             print("sleep")
-            await asyncio.sleep(200)
+            await asyncio.sleep(60000)
         except tweepy.TweepError as e:
             print(e)
 
