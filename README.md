@@ -2,7 +2,9 @@
 
 This tweet bot utilizes multiple packages like environ, tweepy and time to create a simple tweet bot that tweet vocabularies from a list of text. It is not used for anything else besides tweeting. This bot was then deployed through Heroku (an online cloud platform). 
 
-Updated: Because of the lack of resources on Heroku, the retweet bot will also be integrated into this bot as well.
+Include in this tweet bot is the retweeting function that will automatically retweet #WordOfTheDay tweets from multiple sources across Twitter, including Merriam Webster, OED and Thesaurus.com. 
+
+Update: a new feature (the reply bot) is also tested in this time being. Simply tag the bot and a word behind it to find the definition of the word. Currently process 1 request per day due to the low demand.
 
 #### Many thanks to:
 - [Adriaan Van Niekerk with "Python Tutorial | How to deploy your Python Twitter bot to Heroku so that it runs in the cloud"](https://www.youtube.com/watch?v=iLvMYXKIcPo)
