@@ -135,8 +135,8 @@ def webscraping(word):
 
 
 async def main():
-    # task1 = asyncio.create_task(tweeter())
-    # task2 = asyncio.create_task(retweeter())
+    task1 = asyncio.create_task(tweeter())
+    task2 = asyncio.create_task(retweeter())
     task3 = asyncio.create_task(reply_bot())
     await task1
     await task2
