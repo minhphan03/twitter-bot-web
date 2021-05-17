@@ -100,7 +100,7 @@ async def reply_bot():
             if (datetime.datetime.now() - tweet.created_at).total_seconds() < 3600 * 24:
                 text = re.search(r'\s*(?<=(@thevocabbot)).*', tweet.text)
                 result = "@" + tweet.user.screen_name + " " + webscraping(text.group().strip().split())
-                print(result)
+                api.update_status(result)
             else:
                 print("false")
         except tweepy.TweepError as e:
