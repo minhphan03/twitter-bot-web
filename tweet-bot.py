@@ -3,6 +3,7 @@ import tweepy
 import random
 import requests
 import re
+import datetime
 from bs4 import BeautifulSoup
 from os import environ
 
@@ -15,7 +16,8 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-#open the list of the words
+
+# open the list of the words
 
 async def tweeter():
     while True:
@@ -30,7 +32,7 @@ async def tweeter():
                 lines.remove(shuffledline)
                 with open('list.txt', "w") as f:
                     for line in lines:
-                            f.write(line + "\n")
+                        f.write(line + "\n")
 
             except tweepy.TweepError as e:
                 print(e.reason)
@@ -40,73 +42,70 @@ async def tweeter():
 # because heroku restarts daily, no need to create a for loop to refresh page
 
 async def retweeter():
+    while True:
+        for tweet in api.user_timeline(screen_name='MerriamWebster', count=6):
+            try:
+                if "#WordOfTheDay" in tweet.text:
+                    print(tweet.text)
+                    tweet.retweet()
+                    print("time until next retweet session: 10000s")
+                    await asyncio.sleep(10000)
 
-    for tweet in api.user_timeline(screen_name='MerriamWebster', count=6):
-        try:
-            if "#WordOfTheDay" in tweet.text:
-                print(tweet.text)
-                tweet.retweet()
-                print("time until next retweet session: 10000s")
-                await asyncio.sleep(10000)
+                    break
+            except tweepy.TweepError as e:
+                print(e)
 
-                break
-        except tweepy.TweepError as e:
-            print(e)
+        for tweet in api.user_timeline(screen_name='Dictionarycom', count=5):
+            try:
+                if "#WordOfTheDay" in tweet.text:
+                    print(tweet.text)
+                    tweet.retweet()
+                    print("time until next retweet session: 10000s")
+                    await asyncio.sleep(10000)
+                    break
+            except tweepy.TweepError as e:
+                print(e)
 
+        for tweet in api.user_timeline(screen_name='Thesauruscom', count=5):
+            try:
+                if "#SynonymOfTheDay" in tweet.text:
+                    print(tweet.text)
+                    tweet.retweet()
+                    print("time until next retweet session: 10000s")
+                    await asyncio.sleep(10000)
+                    break
 
-    for tweet in api.user_timeline(screen_name='Dictionarycom', count=5):
-        try:
-            if "#WordOfTheDay" in tweet.text:
-                print(tweet.text)
-                tweet.retweet()
-                print("time until next retweet session: 10000s")
-                await asyncio.sleep(10000)
-                break
-        except tweepy.TweepError as e:
-            print(e)
+            except tweepy.TweepError as e:
+                print(e)
 
-    for tweet in api.user_timeline(screen_name='Thesauruscom', count=5):
-        try:
-            if "#SynonymOfTheDay" in tweet.text:
-                print(tweet.text)
-                tweet.retweet()
-                print("time until next retweet session: 10000s")
-                await asyncio.sleep(10000)
-                break
+        for tweet in api.user_timeline(screen_name='OED', count=2):
+            try:
+                if "Word of the Day" in tweet.text:
+                    print(tweet.text)
+                    tweet.retweet()
+                    print("time until next retweet session: 10000s")
+                    await asyncio.sleep(10000)
+                    break
 
-        except tweepy.TweepError as e:
-            print(e)
+            except tweepy.TweepError as e:
+                print(e)
 
-    for tweet in api.user_timeline(screen_name='OED', count=2):
-        try:
-            if "Word of the Day" in tweet.text:
-                print(tweet.text)
-                tweet.retweet()
-                print("time until next retweet session: 10000s")
-                await asyncio.sleep(10000)
-                break
-
-        except tweepy.TweepError as e:
-            print(e)
+        await asyncio.sleep(10000)
 
 async def reply_bot():
     print("retrieving mentions")
-    for tweet in tweepy.Cursor(api.mentions_timeline).items(limit=1):
+    search_query = '@thevocabbot'
+    for tweet in api.search(q=search_query, count=2):
         try:
-            isAnswered = False
-            text = re.search(r'\s*(?<=(@thevocabbot)).*', tweet.text)
-            result = "@" + tweet.user.screen_name + " " + webscraping(text.group().strip().split())
-            for tweet in api.user_timeline(screen_name='thevocabbot', count=10):
-                if str(tweet.text)[:50] == result[:50]:
-                    print("break")
-                    isAnswered = True
-
-            if (isAnswered == False):
-                api.update_status(status=f"@{tweet.user.screen_name} {result}", in_reply_to_status_id = tweet.id)
-            print("sleep")
-            await asyncio.sleep(60000)
+            if (datetime.datetime.now() - tweet.created_at).total_seconds() < 3600 * 24:
+                text = re.search(r'\s*(?<=(@thevocabbot)).*', tweet.text)
+                result = "@" + tweet.user.screen_name + " " + webscraping(text.group().strip().split())
+                print(result)
+            else:
+                print("false")
         except tweepy.TweepError as e:
             print(e)
+
 
 def webscraping(word):
     try:
@@ -132,16 +131,17 @@ def webscraping(word):
         return " ".join(word) + ": " + "; ".join(strings) + ". See more at " + link
 
     except requests.exceptions:
-        return "This word does not exist in Merriam Webster. Please look up manually or check your grammar. DM us if you have any request."
+        return "This word does not exist in Merriam Webster. Please look up manually or check your grammar. DM me if you have any request."
 
 
 async def main():
-    task1 = asyncio.create_task(tweeter())
-    task2 = asyncio.create_task(retweeter())
+    # task1 = asyncio.create_task(tweeter())
+    # task2 = asyncio.create_task(retweeter())
     task3 = asyncio.create_task(reply_bot())
     await task1
     await task2
     await task3
+
 
 if __name__ == "__main__":
     asyncio.run(main())
