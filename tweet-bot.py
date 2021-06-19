@@ -134,14 +134,3 @@ def webscraping(word):
         return "This word does not exist in Merriam Webster. Please look up manually or check your grammar. DM me if you have any request."
 
 
-async def main():
-    task1 = asyncio.create_task(tweeter())
-    task2 = asyncio.create_task(retweeter())
-    task3 = asyncio.create_task(reply_bot())
-    await task1
-    await task2
-    await task3
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
