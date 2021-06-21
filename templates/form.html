@@ -2,39 +2,62 @@
 <!-- add HTML below -->
 <html>
 <head>
-<link rel="stylesheet" href="{{ url_for('static', filename='form.css')}}"/>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="{{ url_for('static', filename='form.css')}}"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+	<title>Word Interest Form</title>	
 </head>
 
 <body>
-<h1>Form For New Words</h1>
-<div class='text'>
-	<p style='font-size:20px'>Instructions:</p>
-	<ol class='ordered_list'>
-		<li>Type in the word you want to import into the word database</li>
-		<li>Click submit and wait for the result from Merriam-Webster website</li>
-		<li>If you're satisfied with the result, click Agree</li>
-	</ol>
-</div>
-<div>
-<form>
-<div class='field'>
-<label for='word' class='text'>Word that you want to put in: </label>
-<input type='text' class='inp' placeholder="required" id='word' required style='padding:10px;'><br>
-</div>
-<div class='field'>
-<label for='word' class='text'>Definition of the word: </label>
-<input class='inp' type='text' placeholder="required" id='word' required style='padding:10px'>
-<button type='Submit' style='padding: 8px; position: absolute; left: 27%' class='text'>Submit</button>
-</div>
-</form>
-</div>
+	<h1>Form For New Words</h1>		
+	<div class='text'>
+		<p style='font-size:20px'>Instructions:</p>
+		<ol class='ordered_list'>
+			<li>Type in the word you want to import into the word database</li>
+			<li>Click submit and wait for the result from Merriam-Webster website</li>
+			<li>If you're satisfied with the result, click Agree</li>
+		</ol>
+	</div>
+	<div>
+		<form action='/result' method='POST'>
+			<div class='field'>
+				<label for='word' class='text'>Word that you want to put in: </label>
+				<input type='text' class='inp' placeholder="required" name='word' id='word' required style='padding:10px;'><br>
+			</div>
+			<div class='field'>
+				<label for='definition' class='text'>Definition of the word: </label>
+				<input class='inp' type='text' placeholder="required" name='definition' id='definition' required style='padding:10px'>
+				<button type='Submit' id="submit" style='padding: 8px; ' class='text'>Submit</button>
+			</div>
+		</form>
+	</div>
+	<script type=text/javascript src="{{
+	url_for('static', filename='jquery.js') }}">
+	</script>
+	<script type=text/javascript 
+		$(function() {
+			$('#submit').click(function() {
+				$.ajax({
+					url: '/result',
+					data: $('form').serialize(),
+					type: 'POST',
+					success: function(response) {
+						console.log(response);
+					},
+					error: function(error){
+						console.log(error);
+					}
+				})
+			})
+		});
+	></script>
+	
+	
 </body>
 
 <footer>
-<p class='text'>Made by Minh Phan as part of the tweet bot from Twitter. Visit my GitHub <a href="https://github.com/minhphan03" target="_blank">here</a>. </p>
+	<p class='text'>Made by Minh Phan as part of the tweet bot from Twitter. Visit my GitHub <a href="https://github.com/minhphan03" target="_blank">here</a>. </p>
 </footer>
 </html>
