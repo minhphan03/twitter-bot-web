@@ -7,29 +7,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
-	<title>Word Interest Form</title>
-	<script type=text/javascript src="{{
-	url_for('static', filename='jquery.js') }}">
-	</script>
-	<script type=text/javascript>
-		$(document).ready(function() {
-			$('button').click(function(e) {
-				e.preventDefault();
-				$.ajax({
-					url: '/result',
-					data: $('form').serialize(),
-					type: 'POST',
-					dataType: 'json',
-					success: function(response) {
-						console.log(response);
-					},
-					error: function(error){
-						console.log(error);
-					}
-				});
-			});
-		});
-	</script>
+	<title>Word Interest Form</title>	
 </head>
 
 <body>
@@ -50,9 +28,31 @@
 			</div>
 			<button type='Submit' style='padding: 8px; ' class='text'>Submit</button>
 		</form>
-		<p id="res"></p>
-	</div>
 
+	</div>
+	<p class="text" style='font-size:20px'>Confirmation</p>
+	<p class="text">{{word}}{{definition}}</p>
+	<script type=text/javascript src="{{
+	url_for('static', filename='jquery.js') }}">
+	</script>
+	<script type=text/javascript>
+		$(function() {
+			$('#submit').click(function() {
+				$.ajax({
+					url: '/result',
+					data: $('form').serialize(),
+					type: 'POST',
+					dataType: 'json',
+					success: function(response) {
+						console.log(response);
+					},
+					error: function(error){
+						console.log(error);
+					}
+				})
+			})
+		});
+	</script>
 	
 	
 </body>

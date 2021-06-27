@@ -1,5 +1,7 @@
 from flask import Flask,render_template, request, json
 
+from tweetbot import webscraping
+
 app = Flask(__name__)
 app.static_folder = 'static'
 
@@ -12,8 +14,8 @@ def main():
 @app.route("/result", methods=['POST'])
 def parse_content():
     _word = request.form['word']
-    _def = request.form['definition']
-    return "<h1>hello</h1>"
-
+    _def = webscraping(_word)
+    #return render_template("result.html",word=_word,definition = _def)
+    return json.dumps({'html':'<span>All fields good !!</span>'})
 if __name__ == "__main__":
     app.run()

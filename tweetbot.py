@@ -7,14 +7,14 @@ import datetime
 from bs4 import BeautifulSoup
 from os import environ
 
-CONSUMER_KEY = environ['CONSUMER_KEY']
-CONSUMER_SECRET = environ['CONSUMER_SECRET']
-ACCESS_TOKEN = environ['ACCESS_TOKEN']
-ACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+# CONSUMER_KEY = environ['CONSUMER_KEY']
+# CONSUMER_SECRET = environ['CONSUMER_SECRET']
+# ACCESS_TOKEN = environ['ACCESS_TOKEN']
+# ACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']
+# auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+# auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+#api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 
 # open the list of the words
@@ -128,7 +128,7 @@ def webscraping(word):
                 text = re.sub(re.search(r"sense \w+", i.get_text()).group(), "", text)
             strings.append(text)
 
-        return " ".join(word) + ": " + "; ".join(strings) + ". See more at " + link
+        return ": " + "; ".join(strings)
 
     except requests.exceptions:
         return "This word does not exist in Merriam Webster. Please look up manually or check your grammar. DM me if you have any request."
