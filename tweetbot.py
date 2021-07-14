@@ -107,7 +107,7 @@ async def reply_bot():
             print(e)
 
 
-def webscraping(word):
+def webscraping(word)->str:
     try:
         link = "https://www.merriam-webster.com/dictionary/" + "+".join(word)
         r = requests.get(link)
@@ -130,7 +130,7 @@ def webscraping(word):
 
         return ": " + "; ".join(strings)
 
-    except requests.exceptions:
-        return "This word does not exist in Merriam Webster. Please look up manually or check your grammar. DM me if you have any request."
+    except:
+        return ": this word does not exist in Merriam Webster. Please look up manually or check your grammar. DM me if you have any request."
 
 

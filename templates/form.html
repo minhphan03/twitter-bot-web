@@ -11,24 +11,9 @@
 	<script type=text/javascript src="{{
 	url_for('static', filename='jquery.js') }}">
 	</script>
-	<script type=text/javascript>
-		$(document).ready(function() {
-			$('button').click(function(e) {
-				e.preventDefault();
-				$.ajax({
-					url: '/result',
-					data: $('form').serialize(),
-					type: 'POST',
-					dataType: 'json',
-					success: function(response) {
-						console.log(response);
-					},
-					error: function(error){
-						console.log(error);
-					}
-				});
-			});
-		});
+	<script type="text/javascript" id="confirmbutton">
+		{% block confirmbutton %}
+		{% endblock %}
 	</script>
 </head>
 
@@ -46,14 +31,13 @@
 		<form action='/result' method='POST'>
 			<div class='field'>
 				<label for='word' class='text'>Word that you want to put in: </label>
-				<input type='text' class='inp' placeholder="required" name='word' id='word' required style='padding:10px;'><br>
+				<input type='text' class='inp' placeholder="required" name='word' id='word' required style='padding:10px;'>
+				<button type='Submit' class='text submit'>Submit</button>
 			</div>
-			<button type='Submit' style='padding: 8px; ' class='text'>Submit</button>
 		</form>
-		<p id="res"></p>
 	</div>
 
-	
+	<div id='confirmation'>{% block confirmation %}{% endblock %}</div>
 	
 </body>
 
