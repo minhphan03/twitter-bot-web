@@ -2,18 +2,17 @@
 {% block confirmation %}
 	<p class="text" style='font-size:20px'>Confirmation</p>
 	<p class="text">{{word}}{{definition}}</p><br>
-	<a href="/finish">
-     <button class="submit text" id="confirm">Confirm</button>
-   	</a>
-
-	<!-- add ajax post button to send data to the server-->
+	<button class="submit text" id="confirm">Confirm</button>
 {% endblock %}
+
 {% block confirmbutton %}
 	$(document).ready(function() {
 		$('#confirm').click(function(e) {
-			$.ajax({
+			e.preventDefault();
+			data_ = {w: "{{word}}", d:"{{definition}}" };
+			/* $.ajax({
 				url: '/finish',
-				data: { w: $('{{word}}').serialize(), d: $('{{definition}}').serialize()},
+				data: data_,
 				type: 'POST',
 				dataType: 'json',
 				success: function(response) {
@@ -22,7 +21,9 @@
 				error: function(error){
 					console.log(error);
 				}
-			});
+			}); */
+			console.log("{{word}} {{definition}}");
+			window.open('/finish');
 		});
 	});
 {% endblock %}
