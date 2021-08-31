@@ -1,7 +1,12 @@
 {% extends "form.html" %}
 {% block confirmation %}
 	<p class="text" style='font-size:20px'>Confirmation</p>
-	<p class="text">{{word}}{{definition}}</p><br>
+	<p class="text">{{word}}</p><br>
+	<p class="text">If you want to modify your input, please fix it in the textbox below</p>
+	<input type='text' class='inp' placeholder="required" name='definition' id='alt_definition' required style='padding:10px;'>
+	<script type="txt/javascript">
+		var txtName = document.getElementById("alt_definition").innerHTML = {{definition}}
+	</script>
 	<button class="submit text" id="confirm">Confirm</button>
 {% endblock %}
 
@@ -9,9 +14,10 @@
 	$(document).ready(function() {
 		$('#confirm').click(function(e) {
 			e.preventDefault();
-			data_ = {w: "{{word}}", d:"{{definition}}" };
-			/* $.ajax({
-				url: '/finish',
+			const def = document.getElementById("alt_definition).innerHTML
+			data_ = {w: "{{word}}", d: def };
+			$.ajax({
+				url: '/path',
 				data: data_,
 				type: 'POST',
 				dataType: 'json',
@@ -21,8 +27,8 @@
 				error: function(error){
 					console.log(error);
 				}
-			}); */
-			console.log("{{word}} {{definition}}");
+			});
+			console.log("{{word}}" + def);
 			window.open('/finish');
 		});
 	});

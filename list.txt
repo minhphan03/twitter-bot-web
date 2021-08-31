@@ -9,6 +9,7 @@ artifice: gimmick / contrivance ; cleverness ; cunning / deception / con
 abrupt: sudden or unexpected ; curt
 acolyte: a follower / helper of a leader
 admissible: acceptable
+addle: to make somebody unable to think clearly; to confuse sb
 atrocious: brutal ; monstrous / evil / abominable
 anticlimactic: dull, boring >< climactic
 allude: to make a subtle reference to ; to suggest
@@ -68,7 +69,9 @@ compulsion: the urge / impulse to perform an act ; the act of compelling / coerc
 convalesce: to recuperate
 clamorous: full of the nature of clamor (loud uproars from crowds of pp / vehement expression of desire/dissatisfaction)
 clamp: to hold sth tightly so it will not move
+clique: a small group of pp who spend time together and do not allow others to join them
 cramp: to restrict / confine / constrain
+
 
 dawdle: to take a long time to do sth 
 daub: to deface / smear / smudge
@@ -100,6 +103,7 @@ enshroud: cover sth so it can't be seen
 enjoin: to exhort (call upon / persuade sb to do sth / beseech); to inhibit/prohibit
 elicit: to bring out/evoke sth from somebody
 elapse: (of time) to pass by
+elope: to run away to marry somebody secretly
 expiate: to make amends by accepting punishment
 exhort: to urge, advise, or caution earnestly; admonish urgently.
 expunge: to efface / wipe out / destroy
@@ -138,11 +142,13 @@ grimy: covered with dirt
 grisly: extrememly unpleasant and frightening
 grudge: a feeling of anger or dislike towards sb because of sth bad they have done to you in the past
 grudging: unwilling / reluctant
+(with) gusto: with enthusiasm and energy
 
 heinous: hateful / odious / abominable / reprehensible:
 hideous: abominable / awful / appalling / disgusting / frightful / nasty / monstrous / horrendous
-
+highfalutin: try to be serious or important but in a way that often appears silly and unnecessary / pretentious
 irrecogible: incurable
+irate: very angry
 imbue: to infuse sb with opinions / values
 imminent: impending / forthcoming (sth bad)
 improvident: prodigal / extravagant
@@ -190,6 +196,7 @@ mundane: mediocre
 muster: to summon (courage)
 mutable: changeable
 morale: cheerfulness, confidence, zeal, etc., especially in the face of opposition, hardship
+morsel: a small amount of sth, especially food
 
 overwrought: extremely or excessively excited or agitated ; excessively complex or ornate
 odious: detestable; hateful
@@ -214,6 +221,8 @@ perpetrate: to commit (a crime)
 perennial: perpetial; everlasting; recurrent
 pliable: flexible = pliant
 plight: trouble; predicament
+prudish: strait-laced
+prissy: prudish
 predicament: an unpleasantly difficult, perplexing, or dangerous situation
 precipitate: to hasten the occurence ; accelerate
 preposterous: ridiculous
@@ -283,10 +292,14 @@ supersede: to replace
 superimpose: to add some qualities of a system into another one to improve / combine the qualities of both
 summit: the highest point of attainment or aspiration / the highest state or degree
 stealthy: surreptitious, clandestine
+stench: very unpleasant smell / reek
 stupefy: to cause sb to be unable to think clearly / to daze; to amaze / astonish
+stump: to ask sb a hard question, baffle; to stomp
+stinker: a person or thing that is very unpleasant or difficult
 stipend: a fixed and regular payment, such as a salary for services rendered or an allowance
 stalwart: sturdy, robust; strong & brave; uncompromising
 stratify: to form or place in layers
+strain every sinew (to do sth): to try as hard as you can do
 straight-laced: having strict ideas about moral behaviors
 strife: vigorous or bitter conflict, discord, or antagonism
 strenuous: vigorously active ; require great effort, energy
@@ -346,3 +359,4 @@ vicinity: tthe area or region near or about a place ; neighborhood
 wheedle: to use beguiling or artful persuasions
 woe: grievous distress, affliction, or trouble
 woebegone: miserable
+writ large: easy to understand or see
