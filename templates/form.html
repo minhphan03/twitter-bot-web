@@ -8,18 +8,14 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
 	<title>Word Interest Form</title>
-	<script type=text/javascript src="{{
-	url_for('static', filename='jquery.js') }}">
-	</script>
-	<script type="text/javascript" id="confirmbutton">
-		{% block confirmbutton %}
-		{% endblock %}
-	</script>
+	<script src="{{url_for('static', filename='jquery.js') }}"></script>
+	<script src="../static/confirm-button.js"></script>
+
 </head>
 
 <body>
 	<h1>Form For New Words</h1>		
-	<div class='text'>
+	<div class='text margin'>
 		<p style='font-size:20px'>Instructions:</p>
 		<ol class='ordered_list'>
 			<li>Type in the word you want to import into the word database</li>
@@ -30,14 +26,18 @@
 	<div>
 		<form action='/result' method='POST'>
 			<div class='field'>
-				<label for='word' class='text'>Word that you want to put in: </label>
+				<label for='word' class='text margin'>Word that you want to put in: </label>
 				<input type='text' class='inp' placeholder="required" name='word' id='word' required style='padding:10px;'>
-				<button type='Submit' class='text submit'>Submit</button>
+				<button type='Submit' class='text submit' onclick="display_def()">Submit</button>
 			</div>
 		</form>
 	</div>
 
-	<div id='confirmation'>{% block confirmation %}{% endblock %}</div>
+	<div id='confirmation'>
+		<p class="text" style='font-size:20px'>The definition of the word {{word}}:</p>
+		<p class="text">If you want to modify your input, please fix it in the textbox below:</p>
+		{% block confirmation %}{% endblock %}
+	</div>
 	
 </body>
 

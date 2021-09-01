@@ -1,35 +1,7 @@
 {% extends "form.html" %}
 {% block confirmation %}
-	<p class="text" style='font-size:20px'>Confirmation</p>
-	<p class="text">{{word}}</p><br>
-	<p class="text">If you want to modify your input, please fix it in the textbox below</p>
-	<input type='text' class='inp' placeholder="required" name='definition' id='alt_definition' required style='padding:10px;'>
-	<script type="txt/javascript">
-		var txtName = document.getElementById("alt_definition").innerHTML = {{definition}}
-	</script>
-	<button class="submit text" id="confirm">Confirm</button>
-{% endblock %}
-
-{% block confirmbutton %}
-	$(document).ready(function() {
-		$('#confirm').click(function(e) {
-			e.preventDefault();
-			const def = document.getElementById("alt_definition).innerHTML
-			data_ = {w: "{{word}}", d: def };
-			$.ajax({
-				url: '/path',
-				data: data_,
-				type: 'POST',
-				dataType: 'json',
-				success: function(response) {
-					console.log(response);
-				},
-				error: function(error){
-					console.log(error);
-				}
-			});
-			console.log("{{word}}" + def);
-			window.open('/finish');
-		});
-	});
+<!--input type='text' class='inp text' placeholder="Definition here" name='definition' id='alt_definition'
+	   value="{{definition}}" required style='padding:10px;'-->
+<textarea class="inp margin" id="alt_definition" name="definition" rows="4" cols= "50">{{definition}}</textarea>
+<button class="submit margin text" id="confirm">Confirm</button>
 {% endblock %}
