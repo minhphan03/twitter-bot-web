@@ -1,5 +1,5 @@
 from flask import Flask,render_template, request
-from tweetbot import webscraping
+from wordfinder import webscraping
 from flaskext.mysql import MySQL
 
 app = Flask(__name__)
