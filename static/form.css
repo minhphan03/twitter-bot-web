@@ -1,8 +1,8 @@
 h1 {text-align: center;font-family: "roboto"; font-size: 40px; }
-.margin {margin-left: 2%;}
+.padd {margin-left: 10px; display: inline-block}
 .text {font-family:"open sans";}
 .ordered_list {margin-left:2%;}
 .field {padding-top:1%; padding-bottom:1%}
 .inp {position:relative; left:1%}
-.submit {padding: 10px}
+.submit {padding: 10px; margin-left: 1%}
 footer {font-size:12px}

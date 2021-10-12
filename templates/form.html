@@ -15,7 +15,7 @@
 
 <body>
 	<h1>Form For New Words</h1>		
-	<div class='text margin'>
+	<div class='padd text'>
 		<p style='font-size:20px'>Instructions:</p>
 		<ol class='ordered_list'>
 			<li>Type in the word you want to import into the word database</li>
@@ -33,7 +33,7 @@
 		</form>
 	</div>
 
-	<div id='confirmation'>
+	<div class='padd' id='confirmation'>
 		<p class="text" style='font-size:20px'>The definition of the word {{word}}:</p>
 		<p class="text">If you want to modify your input, please fix it in the textbox below:</p>
 		{% block confirmation %}{% endblock %}
@@ -42,6 +42,6 @@
 </body>
 
 <footer>
-	<p class='text'>Made by Minh Phan as part of the tweet bot from Twitter. Visit my GitHub <a href="https://github.com/minhphan03" target="_blank">here</a>. </p>
+	<p class='text margin'>Made by Minh Phan as part of the tweet bot from Twitter. Visit my GitHub <a href="https://github.com/minhphan03" target="_blank">here</a>. </p>
 </footer>
 </html>

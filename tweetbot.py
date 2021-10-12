@@ -128,9 +128,10 @@ def webscraping(word)->str:
                 text = re.sub(re.search(r"sense \w+", i.get_text()).group(), "", text)
             strings.append(text)
 
-        return ": " + "; ".join(strings)
+        return "; ".join(strings)
 
-    except:
-        return ": this word does not exist in Merriam Webster. Please look up manually or check your grammar. DM me if you have any request."
+    except Exception as e:
+        print(e)
+        return "CHECK THIS."
 
 

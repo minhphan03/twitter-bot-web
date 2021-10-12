@@ -65,4 +65,4 @@ def view():
     queue[1] = request.form.get('def')
     return
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
