@@ -26,7 +26,7 @@
 	<div>
 		<form action='/result' method='POST'>
 			<div class='field'>
-				<label for='word' class='text margin'>Word that you want to put in: </label>
+				<label for='word' class='text padd'>Word that you want to put in: </label>
 				<input type='text' class='inp' placeholder="required" name='word' id='word' required style='padding:10px;'>
 				<button type='Submit' class='text submit' onclick="display_def()">Submit</button>
 			</div>
@@ -34,7 +34,8 @@
 	</div>
 
 	<div class='padd' id='confirmation'>
-		<p class="text" style='font-size:20px'>The definition of the word {{word}}:</p>
+		<p class="text" style='font-size:20px; display:inline'>The definition of the word</p>
+		<p class="text" style='font-size:20px; display:inline' id="confirm_word">{{word}}</p>
 		<p class="text">If you want to modify your input, please fix it in the textbox below:</p>
 		{% block confirmation %}{% endblock %}
 	</div>

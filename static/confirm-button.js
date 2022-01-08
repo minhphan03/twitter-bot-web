@@ -2,9 +2,10 @@ $(document).ready(function() {
     $('#confirm').click(function(e) {
         e.preventDefault();
         const def = document.getElementById("alt_definition").innerHTML;
-        data_ = {w: "{{word}}", d: def };
+        const word = document.getElementById("confirm_word").innerHTML;
+        data_ = {w: word, d: def };
         $.ajax({
-            url: '/path',
+            url: '/finish',
             data: data_,
             type: 'POST',
             dataType: 'json',
@@ -14,8 +15,10 @@ $(document).ready(function() {
             error: function(error){
                 console.log(error);
             }
+
         });
-        console.log("{{word}}" + def);
+        console.log(word + ": " + def);
+        //for some reason (get into that later) I cannot open this in a new tab?
         window.open('/finish');
     });
 });
