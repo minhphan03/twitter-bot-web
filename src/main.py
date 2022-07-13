@@ -1,21 +1,34 @@
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
 from wordfinder import webscraping
 from flaskext.mysql import MySQL
 import json
 
 app = Flask(__name__)
+
+app.config["DEBUG"] = True
 app.static_folder = 'static'
 
 mysql = MySQL()
 queue = {'Word': '', 'Def': ''}
 
 # database configuration
-app.config['MYSQL_DATABASE_USER'] = 'MinhPhan'
-app.config['MYSQL_DATABASE_PASSWORD']= 'MinhPhanIsComing'
-app.config['MYSQL_DATABASE_DB'] = 'word'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_USER'] = 'minhphan0612'
+app.config['MYSQL_DATABASE_PASSWORD']= 'richardiscoming'
+app.config['MYSQL_DATABASE_DB'] = 'minhphan0612$word'
+app.config['MYSQL_DATABASE_HOST'] = 'minhphan0612.mysql.pythonanywhere-services.com'
 mysql.init_app(app)
 
+# SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
+#     username="minhphan0612",
+#     password="richardiscoming",
+#     hostname="minhphan0612.mysql.pythonanywhere-services.com",
+#     databasename="minhphan0612$word",
+# )
+# app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
+# app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
+# app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+# db = SQLAlchemy(app)
 
 # homepage
 @app.route("/")
